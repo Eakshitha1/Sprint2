@@ -1,0 +1,64 @@
+
+<h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">Restaurant Review Form</h1>
+
+
+<form (ngSubmit)="onSubmit()" #restaurantReviewForm="ngForm">
+    <tr>
+    <div class="form-group">
+        <label for="restaurantId">Restaurant Number</label>
+        <input type="text" class="form-control" id="restaurantId" name="restaurantId"
+               [(ngModel)]="model.restaurantId" placeholder="Enter RestaurantId" required>
+    </div>
+</tr>
+<br>
+
+<tr>
+    <div class="form-group">
+        <label for="customerName">Customer Name</label>
+        <input type="text" class="form-control" id="customerName" name="customerName"
+               [(ngModel)]="model.customerName" place="Enter customerName" required>
+    </div>
+</tr>
+<br>
+
+<tr>
+    <div class="form-group">
+        <label for="itemName">Item Name</label>
+        <input type="text" class="form-control" id="itemName" name="itemName"
+               [(ngModel)]="model.itemName" place="Enter itemName" required>
+    </div>
+</tr>
+<br>
+
+<tr>
+    <div class="form-group">
+    <label for="message">Message</label>
+    <textarea class="form-control" id="comment" name="message"
+            [(ngModel)]="model.message" placeholder="Enter message"></textarea>
+    </div>
+    <br>
+
+<tr>
+    <div class="form-group">
+        <label for="starRating">Number Of Stars</label>
+        <div class="star-rating">
+            <span class="star" [class.filled]="model.starRating >=1" (click)="model.starRating = 1">&#9733;</span>
+            <span class="star" [class.filled]="model.starRating >=2" (click)="model.starRating = 2">&#9733;</span>
+            <span class="star" [class.filled]="model.starRating >=3" (click)="model.starRating = 3">&#9733;</span>
+            <span class="star" [class.filled]="model.starRating >=4" (click)="model.starRating = 4">&#9733;</span>
+            <span class="star" [class.filled]="model.starRating >=5" (click)="model.starRating  =5">&#9733;</span>
+        </div>
+    </div>
+
+</tr>
+<br>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+   </form>
+
+
+
+   <div *ngIf="status == true" class="alert alert-success mt-3">Your review has been submitted successfully.</div>
+   <div *ngIf="status == false" class="alert alert-danger mt-3">An error occurred while submitting your review.</div>
+
+ 
