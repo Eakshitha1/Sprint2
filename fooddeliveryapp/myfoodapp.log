@@ -1,0 +1,22 @@
+2023-02-24 09:06:56.469  WARN 17796 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9h8m34s210ms697µs800ns).
+2023-02-24 10:35:44.022  INFO 17796 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-02-24 10:35:44.028  INFO 17796 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-02-24 10:35:44.059  INFO 17796 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-02-24 10:35:44.070  INFO 17796 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-02-24 10:35:44.230  INFO 17796 --- [restartedMain] c.nv.foodapp.FooddeliveryappApplication  : Starting FooddeliveryappApplication using Java 17.0.5 on INLEN8520044913 with PID 17796 (C:\SprintApp\fooddeliveryapp\bin\main started by eakshith in C:\SprintApp\fooddeliveryapp)
+2023-02-24 10:35:44.231  INFO 17796 --- [restartedMain] c.nv.foodapp.FooddeliveryappApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-02-24 10:35:44.571  INFO 17796 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-24 10:35:44.572  INFO 17796 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-02-24 10:35:44.602  INFO 17796 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-24 10:35:44.650  INFO 17796 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-24 10:35:44.656  INFO 17796 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-02-24 10:35:44.711  INFO 17796 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-02-24 10:35:44.712  INFO 17796 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-02-24 10:35:44.790  INFO 17796 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-24 10:35:44.795  INFO 17796 --- [restartedMain] c.n.f.controller.BillRestController      : Bill rest controller
+2023-02-24 10:35:44.841  INFO 17796 --- [restartedMain] c.n.f.controller.ItemRestController      : Item rest controller
+2023-02-24 10:35:44.911  INFO 17796 --- [restartedMain] c.n.f.c.RestaurantRestController         : restaurant rest controller
+2023-02-24 10:35:44.917  INFO 17796 --- [restartedMain] c.n.f.controller.ReviewRestController    : ---Review Controller called --
+2023-02-24 10:35:44.918  WARN 17796 --- [restartedMain] c.n.f.controller.ReviewRestController    : ---Review Controller called --
+2023-02-24 10:35:44.969  WARN 17796 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-02-24 10:35:45.120  INFO 17796 --- [restartedMain] c.nv.foodapp.FooddeliveryappApplication  : Started FooddeliveryappApplication in 0.924 seconds (JVM running for 75646.882)
