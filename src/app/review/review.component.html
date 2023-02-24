@@ -1,0 +1,80 @@
+<div class="bg-img">
+    <form (ngSubmit)="onSubmit()" #ReviewForm="ngForm">
+        <h1 style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif"> Review </h1>
+        <tr>
+            <div class="form-group">
+                <label for="restaurantId" class="form-control">Restaurant Id</label>
+                <input type="text" class="form-control" id="restaurantId" name="restaurantId"
+                       [(ngModel)]="model.restaurantId" placeholder="Enter restaurantId" name="pid" #restaurantId="ngModel"required pattern="[0-9]+">
+                      
+                        
+                       
+            </div>
+        </tr>
+
+<tr>
+    <div class="form-group">
+        <label for="customerName" class="form-control">Customer Name</label>
+        <input type="text" class="form-control" id="customerName" name="customerName"
+               [(ngModel)]="model.customerName" placeholder="Enter customerName"  name="cname" #customerName="ngModel" required pattern="[a-zA-Z]+">
+               <div *ngIf="customerName.invalid">
+                <span style="color:black;" *ngIf="customerName.errors?.['required']">
+
+                    customer Name is required Field 
+                </span>
+                <span style="color: red;" *ngIf="customerName.errors?.['pattern']">
+                    customer Name is not valid
+                
+                </span>
+               </div>
+    </div>
+</tr>
+
+
+<tr>
+    <div class="form-group">
+        <label for="itemName" class="form-control">Item Name</label>
+        <input type="text" class="form-control" id="itemName" name="itemName"
+               [(ngModel)]="model.itemName" placeholder="Enter itemName" required>
+    </div>
+</tr>
+
+
+<tr>
+    <div class="form-group">
+    <label for="message"  class="form-control">Message</label>
+    <textarea class="form-control"  id="comment" name="message"
+            [(ngModel)]="model.message" placeholder="Enter message" style="color:black"></textarea>
+    </div>
+
+<tr>
+    <div class="form-group">
+        <label for="starRating" class="form-control">How was you rate for us?</label>
+        <div class="star-rating">
+            <span class="star" [class.filled]="model.starRating >=1" (click)="model.starRating = 1">&#9733;</span>
+            <span class="star" [class.filled]="model.starRating >=2" (click)="model.starRating = 2">&#9733;</span>
+            <span class="star" [class.filled]="model.starRating >=3" (click)="model.starRating = 3">&#9733;</span>
+            <span class="star" [class.filled]="model.starRating >=4" (click)="model.starRating = 4">&#9733;</span>
+            <span class="star" [class.filled]="model.starRating >=5" (click)="model.starRating  =5">&#9733;</span>
+
+            
+        </div>
+    </div>
+
+</tr>
+
+
+    <button type="submit" style="background-color: blue; color:white; font-size:15px; ">Submit review</button>
+
+ 
+   </form>
+
+</div>
+
+
+
+
+   <div *ngIf="status == true" class="alert alert-success mt-3">Your review has been submitted successfully.</div>
+   <div *ngIf="status == false" class="alert alert-danger mt-3">An error occurred while submitting your review.</div>
+
+ 
